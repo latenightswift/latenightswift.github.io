@@ -1,0 +1,16 @@
+.site-footer {
+  text-align: center;
+}
+
+.site-footer .footer-logo {
+  opacity: 0.2;
+  display: inline-block;
+  margin: $spacing-unit * 2 auto;
+  text-decoration: none !important;
+}
+
+.site-footer .logomark {
+  display: block;
+  width: 60px;
+  height: 60px;
+}

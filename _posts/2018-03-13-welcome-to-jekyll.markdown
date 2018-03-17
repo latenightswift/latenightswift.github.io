@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Jekyll, something that's pretty cool!"
 date:   2018-03-13 08:39:08 +0000
 categories: jekyll update
 ---
@@ -12,6 +12,8 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 Jekyll also offers powerful support for code snippets:
 
 ```swift
+let foo: Int = 123
+let foo: Int = 123
 let foo: Int = 123
 ```
 
