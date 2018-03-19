@@ -1,0 +1,17 @@
+$logo-color: #262626;
+
+$theme-light: #ffeee4;
+$theme-color: #f88a36;
+$theme-color-light: lighten($theme-color, 15%);
+$theme-dark: #262626;
+
+$background-color: #fdfdfd !default;
+
+$content-text-color: #e3e3e3 !default;
+
+$content-link-color: #fff !default;
+$content-link-hover-color: #ddd !default;
+$content-background-color: #262626 !default;
+$code-background-color: #1C1C1D;
+
+$line-color: $theme-light;

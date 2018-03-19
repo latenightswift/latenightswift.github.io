@@ -1,16 +1,26 @@
 .site-footer {
   text-align: center;
+  line-height: 0;
 }
 
-.site-footer .footer-logo {
-  opacity: 0.2;
+.site-footer .footer-logomark {
   display: inline-block;
-  margin: $spacing-unit * 2 auto;
-  text-decoration: none !important;
+  margin: $unit * 2 auto;
+  opacity: 0.1;
+  transition: opacity $animation-duration;
+
+  > svg {
+    display: block;
+    width: $unit * 2;
+    height: $unit * 2;
+  }
 }
 
-.site-footer .logomark {
-  display: block;
-  width: 60px;
-  height: 60px;
+.site-footer a:hover {
+  opacity: 1;
+
+  svg path {
+    fill: $theme-color;
+    opacity: 1;
+  }
 }

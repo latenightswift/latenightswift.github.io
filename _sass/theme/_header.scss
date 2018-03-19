@@ -1,40 +1,19 @@
 .site-header {
   text-align: center;
+  line-height: 0;
 }
 
-.site-header .header-logo {
+.site-header .header-logomark {
   display: inline-block;
-  margin: $spacing-unit * 2 auto;
-  text-decoration: none !important;
+  margin: $unit * 2 auto;
+
+  > svg {
+    display: block;
+    width: $unit * 3;
+    height: $unit * 3;
+  }
 }
 
-.site-header .logomark {
-  display: block;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 20px;
-}
-
-.site-header .logotype {
-  display: block;
-  font-family: 'Lato', sans-serif;
-  color: $brand-color;
-  margin: 0px auto;
-  text-transform: uppercase;
-
-  .late-night {
-    display: block;
-    font-weight: 300;
-    font-size: 19px;
-    margin-bottom: 0px;
-    line-height: 1em;
-  }
-
-  .swift {
-    display: block;
-    font-size: 36px;
-    font-weight: 400;
-    margin-top: 0px;
-    line-height: 1em;
-  }
+.site-header a:hover svg path {
+  fill: $theme-color;
 }

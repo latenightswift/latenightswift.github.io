@@ -4,8 +4,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato|Source+Serif+Pro" rel="stylesheet">
+  {% if jekyll.environment == 'production' %}
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&amp;subset=latin-ext" rel="stylesheet">
+  {% else %}
+  <style>
+    @font-face {
+      font-family: "Source Serif Pro";
+      font-weight: 400;
+      src: url("{{ "/vendor/google-fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf" | relative_url }}") format('truetype');
+    }
+    @font-face {
+      font-family: "Source Serif Pro";
+      font-weight: 600;
+      src: url("{{ "/vendor/google-fonts/Source_Serif_Pro/SourceSerifPro-Semibold.ttf" | relative_url }}") format('truetype');
+    }
+  </style>
+  {% endif %}
+
+  {% if jekyll.environment == 'production' %}
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  {% else %}
+  <link rel="stylesheet" href="{{ "/vendor/bootstrap/4.0.0/css/bootstrap.min.css" | relative_url }}">
+  {% endif %}
+
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">

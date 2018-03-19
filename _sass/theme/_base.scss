@@ -1,40 +1,23 @@
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl,
-%vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-ul, ol {
-  margin-left: $spacing-unit;
-}
-
-li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+body {
+  background-color: $background-color;
+  color: $content-text-color;
 }
 
 a {
-  color: $brand-color;
-  text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  color: $theme-color;
+  text-decoration: underline;
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: $theme-color-light;
   }
+}
+
+.container {
+  max-width: $content-width;
+}
+
+main {
+  background-color: $content-background-color;
+  padding: $unit 0;
+  overflow: hidden; // Prevent margin collapsing to siblings
 }

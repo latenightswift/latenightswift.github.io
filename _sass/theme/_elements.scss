@@ -1,12 +1,13 @@
-//
-// SVG Icons
-//
+.logomark > svg path {
+  transition: fill $animation-duration;
+  fill: $logo-color;
+}
 
-.icon > svg {
-  display: inline-block;
-  vertical-align: middle;
-
-  path {
-    fill: $grey-color;
+div.highlighter-rouge {
+  @extend %full-width;
+  > .highlight {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
