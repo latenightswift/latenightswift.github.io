@@ -19,7 +19,7 @@
   @extend %code;
   max-width: 800px;
   margin: $unit * 2 auto;
-  padding: $unit;
+  padding: $unit $content-edge-padding;
 }
 
 %code-block-code {
