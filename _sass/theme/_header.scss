@@ -3,7 +3,7 @@
   line-height: 0;
 }
 
-.site-header .header-logomark {
+.site-header a.header-logomark {
   display: inline-block;
   margin: $unit * 2 auto;
 
@@ -12,8 +12,8 @@
     width: $unit * 3;
     height: $unit * 3;
   }
-}
 
-.site-header a:hover svg path {
-  fill: $theme-color;
+  &:hover svg path {
+    fill: $theme-color;
+  }
 }

@@ -3,7 +3,7 @@
   line-height: 0;
 }
 
-.site-footer .footer-logomark {
+.site-footer a.footer-logomark {
   display: inline-block;
   margin: $unit * 2 auto;
   opacity: 0.1;
@@ -14,13 +14,13 @@
     width: $unit * 2;
     height: $unit * 2;
   }
-}
 
-.site-footer a:hover {
-  opacity: 1;
-
-  svg path {
-    fill: $theme-color;
+  &:hover {
     opacity: 1;
+
+    svg path {
+      fill: $theme-color;
+      opacity: 1;
+    }
   }
 }
