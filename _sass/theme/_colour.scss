@@ -1,17 +1,19 @@
-$logo-color: #262626;
+$logo-color: #fdfdfd;
 
 $theme-light: #ffeee4;
 $theme-color: #f88a36;
-$theme-color-light: lighten($theme-color, 15%);
 $theme-dark: #262626;
 
-$background-color: #fdfdfd !default;
+$header-footer-background-color: #1c1c1d;
+$main-background-color: $theme-dark;
+$code-background-color: $header-footer-background-color;
 
-$content-text-color: #e3e3e3 !default;
+$header-footer-text-color: #999;
+$main-text-color: #e3e3e3;
+$main-meta-text-color: #aaa;
 
-$content-link-color: #fff !default;
-$content-link-hover-color: #ddd !default;
-$content-background-color: #262626 !default;
-$code-background-color: #1C1C1D;
+$header-footer-link-color: #999;
+$header-footer-link-color-alt: $theme-color;
 
-$line-color: $theme-light;
+$main-link-color: $theme-color;
+$main-link-color-alt: lighten($main-link-color, 15%);

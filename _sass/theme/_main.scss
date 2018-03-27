@@ -1,0 +1,19 @@
+main {
+	background-color: $main-background-color;
+	color: $main-text-color;
+	margin-top: $header-height; // Push under floating header
+	padding: $unit * 2 0;
+	overflow: hidden; // Prevent margin collapsing to siblings
+}
+
+main .container {
+	max-width: $main-content-width;
+}
+
+main a {
+	color: $main-link-color;
+
+	&:hover {
+		color: $main-link-color-alt;
+	}
+}

@@ -1,5 +1,21 @@
 <header class="site-header" role="banner">
-  <div class="container">
-    <a class="header-logomark logomark" href="/">{% include logomark.svg %}</a>
-  </div>
+	<div class="container">
+		<div class="header-logomark">
+			<a class="logomark" href="/">{% include logomark-inverse.svg %}</a>
+		</div>
+
+		<div class="left-side">
+			<ul>
+				<li class="header-subscribe"><a href="{{ site.mailchimp_url }}">Subscribe</a></li>
+				<li class="header-search"><a href="https://www.google.co.uk/search?q=site:www.latenightswift.com">Search</a></li>
+			</ul>
+		</div>
+
+		<div class="right-side">
+			<ul>
+				<li class="header-github"><a href="{{ site.github_url }}">GitHub</a></li>
+				<li class="header-twitter"><a href="{{ site.twitter_url }}">Twitter</a></li>
+			</ul>
+		</div>
+	</div>
 </header>

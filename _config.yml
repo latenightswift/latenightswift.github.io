@@ -6,8 +6,9 @@ description: >-
   Google search results) and in your feed.xml site description.
 baseurl: ""
 url: "http://www.latenightswift.com"
-twitter_username: latenightswift_
-github_username: latenightswift
+twitter_url: https://twitter.com/latenightswift_
+github_url: https://github.com/latenightswift
+subscribe_url: https://mailchimp.com
 
 # Build Settings
 markdown: kramdown

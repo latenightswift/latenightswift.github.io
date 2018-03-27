@@ -1,0 +1,13 @@
+.site-header,
+.site-footer {
+	background: $header-footer-background-color;
+}
+
+.site-footer a,
+.site-header a {
+	color: $header-footer-link-color;
+
+	&:hover {
+		color: $header-footer-link-color-alt;
+	}
+}

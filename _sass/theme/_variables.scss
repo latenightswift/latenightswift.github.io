@@ -1,8 +1,15 @@
 $unit: 27px;
-$content-width: 560px;
+$animation-duration: 0.3s;
 $on-palm: 600px;
 $on-laptop: 800px;
-$border-thickness: 2px;
-$animation-duration: 0.3s;
+$content-horizontal-padding: 15px;
 
-$content-edge-padding: 15px;
+$border-thickness: 2px;
+$hr-height: 3px;
+
+$header-footer-content-width: 800px;
+$minimum-content-width: 320px;
+$main-content-width: 560px;
+$extended-content-width: 800px; // Images, code blocks, etc
+
+$header-height: $unit * 5;

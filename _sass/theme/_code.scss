@@ -1,142 +1,133 @@
 %code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  tab-size: 4;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	tab-size: 4;
 }
 
 %code-inline {
-  @extend %code;
-  font-size: 0.9rem;
-  color: $theme-color;
-  padding: 0 0.1rem;
+	@extend %code;
+	font-size: 0.9rem;
+	color: $theme-color;
+	padding: 0 0.1rem;
 }
 
 %code-block-outer {
-  @extend %code;
-  background-color: $code-background-color;
+	@extend %code;
+	@extend %full-width;
+	background-color: $code-background-color;
 }
 
 %code-block-constrained-width {
-  @extend %code;
-  max-width: 800px;
-  margin: $unit * 2 auto;
-  padding: $unit $content-edge-padding;
+	@extend %code;
+	max-width: $extended-content-width;
+	margin: $unit * 2 auto;
+	padding: $unit $content-horizontal-padding;
 }
 
 %code-block-code {
-  @extend %code;
-  font-size: 0.8rem;
+	@extend %code;
+	font-size: 0.8rem;
 }
 
 %code-highlighting {
-  $attribute: rgb(255*0.851, 255*0.73, 255*0.398);
-  $character: rgb(255*0.972549, 255*0.541176, 255*0.211765);
-  $comment: rgb(255*0.368627, 255*0.360784, 255*0.305882);
-  $comment-doc: rgb(255*0.70532, 255*0.396603, 255*0.167811);
-  $comment-doc-keyword: rgb(255*0.368627, 255*0.360784, 255*0.305882);
-  $identifier-class: rgb(255*0.365, 255*0.486, 255*0.616);
-  $identifier-class-system: rgb(255*0.365, 255*0.486, 255*0.616);
-  $identifier-constant: rgb(255*0.424366, 255*0.738, 255*0.564393);
-  $identifier-constant-system: rgb(255*0.365, 255*0.486, 255*0.616);
-  $identifier-function: rgb(255*0.642096, 255*0.758251, 255*0.563998);
-  $identifier-function-system: rgb(255*0.365, 255*0.486, 255*0.616);
-  $identifier-macro: rgb(255*0.29869, 255*0.612874, 255*0.626475);
-  $identifier-macro-system: rgb(255*0.365, 255*0.486, 255*0.616);
-  $identifier-type: rgb(255*0.756457, 255*0.469833, 255*0.309481);
-  $identifier-type-system: rgb(255*0.365, 255*0.486, 255*0.616);
-  $identifier-variable: rgb(255*0.873, 255*0.752, 255*0.446);
-  $identifier-variable-system: rgb(255*0.365, 255*0.486, 255*0.616);
-  $keyword: #f88a36;
-  $number: rgb(255*1, 255*0.821374, 255*0.00901533);
-  $plain: rgb(255*0.890196, 255*0.890196, 255*0.890196);
-  $preprocessor: rgb(255*0.689203, 255*0.534063, 255*0.216883);
-  $string: rgb(255*0.972549, 255*0.541176, 255*0.211765);
-  $url: rgb(255*0.368627, 255*0.360784, 255*0.305882);
+	$plain: #E3E3E3;
+	$comment: #5E5C4E;
+	$string: #FFD102;
+	$number: #FFD102;
+	$keyword: #f88a36;
+	$preprocessor: #B08837;
+	$attribute: #D9BA65;
+	$class: #5D7C9D;
+	$function: #A4C190;
+	$constant: #6CBC90;
+	$type: #FFF3AC;
+	$variable: #DFC072;
+	$macro: #4C9CA0;
 
-  color: $plain;
+	color: $plain;
 
-  .c     { color: $comment } // Comment
-  .err   {} // Error
-  .k     { color: $keyword; } // Keyword
-  .o     {} // Operator
-  .cm    { color: $comment} // Comment.Multiline
-  .cp    { color: $preprocessor } // Comment.Preproc
-  .c1    { color: $comment } // Comment.Single
-  .cs    { color: $comment } // Comment.Special
-  .gd    {} // Generic.Deleted
-  .gd .x {} // Generic.Deleted.Specific
-  .ge    {} // Generic.Emph
-  .gr    {} // Generic.Error
-  .gh    {} // Generic.Heading
-  .gi    {} // Generic.Inserted
-  .gi .x {} // Generic.Inserted.Specific
-  .go    {} // Generic.Output
-  .gp    {} // Generic.Prompt
-  .gs    {} // Generic.Strong
-  .gu    {} // Generic.Subheading
-  .gt    {} // Generic.Traceback
-  .kc    { color: $keyword } // Keyword.Constant
-  .kd    { color: $keyword } // Keyword.Declaration
-  .kp    { color: $keyword } // Keyword.Pseudo
-  .kr    { color: $keyword } // Keyword.Reserved
-  .kt    { color: $identifier-class } // Keyword.Type
-  .m     { color: $number } // Literal.Number
-  .s     { color: $string } // Literal.String
-  .na    { color: $attribute } // Name.Attribute
-  .nb    { color: red } // Name.Builtin
-  .nc    { color: $identifier-class } // Name.Class
-  .no    { color: $identifier-constant } // Name.Constant
-  .ni    { color: red } // Name.Entity
-  .ne    { color: red } // Name.Exception
-  .nf    { color: $identifier-function } // Name.Function
-  .nn    { color: red } // Name.Namespace
-  .nt    { color: red } // Name.Tag
-  .nv    { color: $identifier-variable } // Name.Variable
-  .ow    {} // Operator.Word
-  .w     {} // Text.Whitespace
-  .mf    { color: $number } // Literal.Number.Float
-  .mh    { color: $number } // Literal.Number.Hex
-  .mi    { color: $number } // Literal.Number.Integer
-  .mo    { color: $number } // Literal.Number.Oct
-  .sb    { color: $string } // Literal.String.Backtick
-  .sc    { color: $string } // Literal.String.Char
-  .sd    { color: $string } // Literal.String.Doc
-  .s2    { color: $string } // Literal.String.Double
-  .se    { color: $string } // Literal.String.Escape
-  .sh    { color: $string } // Literal.String.Heredoc
-  .si    { color: $string } // Literal.String.Interpol
-  .sx    { color: $string } // Literal.String.Other
-  .sr    { color: $string } // Literal.String.Regex
-  .s1    { color: $string } // Literal.String.Single
-  .ss    { color: $string } // Literal.String.Symbol
-  .bp    { color: red } // Name.Builtin.Pseudo
-  .vc    { color: $identifier-class } // Name.Variable.Class
-  .vg    { color: red } // Name.Variable.Global
-  .vi    { color: red } // Name.Variable.Instance
-  .il    { color: $number } // Literal.Number.Integer.Long
+	.c		 { color: $comment } // Comment
+	.err	 {} // Error
+	.k		 { color: $keyword; } // Keyword
+	.o		 {} // Operator
+	.cm		{ color: $comment} // Comment.Multiline
+	.cp		{ color: $preprocessor } // Comment.Preproc
+	.c1		{ color: $comment } // Comment.Single
+	.cs		{ color: $comment } // Comment.Special
+	.gd		{} // Generic.Deleted
+	.gd .x {} // Generic.Deleted.Specific
+	.ge		{} // Generic.Emph
+	.gr		{} // Generic.Error
+	.gh		{} // Generic.Heading
+	.gi		{} // Generic.Inserted
+	.gi .x {} // Generic.Inserted.Specific
+	.go		{} // Generic.Output
+	.gp		{} // Generic.Prompt
+	.gs		{} // Generic.Strong
+	.gu		{} // Generic.Subheading
+	.gt		{} // Generic.Traceback
+	.kc		{ color: $keyword } // Keyword.Constant
+	.kd		{ color: $keyword } // Keyword.Declaration
+	.kp		{ color: $keyword } // Keyword.Pseudo
+	.kr		{ color: $keyword } // Keyword.Reserved
+	.kt		{ color: $class } // Keyword.Type
+	.m		 { color: $number } // Literal.Number
+	.s		 { color: $string } // Literal.String
+	.na		{ color: $attribute } // Name.Attribute
+	.nb		{} // Name.Builtin
+	.nc		{ color: $class } // Name.Class
+	.no		{ color: $constant } // Name.Constant
+	.ni		{} // Name.Entity
+	.ne		{} // Name.Exception
+	.nf		{ color: $function } // Name.Function
+	.nn		{} // Name.Namespace
+	.nt		{} // Name.Tag
+	.nv		{ color: $variable } // Name.Variable
+	.ow		{} // Operator.Word
+	.w		 {} // Text.Whitespace
+	.mf		{ color: $number } // Literal.Number.Float
+	.mh		{ color: $number } // Literal.Number.Hex
+	.mi		{ color: $number } // Literal.Number.Integer
+	.mo		{ color: $number } // Literal.Number.Oct
+	.sb		{ color: $string } // Literal.String.Backtick
+	.sc		{ color: $string } // Literal.String.Char
+	.sd		{ color: $string } // Literal.String.Doc
+	.s2		{ color: $string } // Literal.String.Double
+	.se		{ color: $string } // Literal.String.Escape
+	.sh		{ color: $string } // Literal.String.Heredoc
+	.si		{ color: $string } // Literal.String.Interpol
+	.sx		{ color: $string } // Literal.String.Other
+	.sr		{ color: $string } // Literal.String.Regex
+	.s1		{ color: $string } // Literal.String.Single
+	.ss		{ color: $string } // Literal.String.Symbol
+	.bp		{} // Name.Builtin.Pseudo
+	.vc		{ color: $class } // Name.Variable.Class
+	.vg		{} // Name.Variable.Global
+	.vi		{} // Name.Variable.Instance
+	.il		{ color: $number } // Literal.Number.Integer.Long
 }
 
 // Application
 
 p code.highlighter-rouge {
-  @extend %code-inline;
+	@extend %code-inline;
 }
 
 div.highlighter-rouge {
-  @extend %code-block-outer;
+	@extend %code-block-outer;
 
-  > div.highlight {
-    @extend %code-block-constrained-width;
+	> div.highlight {
+		@extend %code-block-constrained-width;
 
-    > pre.highlight {
-      margin: 0;
+		> pre.highlight {
+			margin: 0;
 
-      code {
-        @extend %code-block-code;
-      }
-    }
-  }
+			code {
+				@extend %code-block-code;
+			}
+		}
+	}
 }
 
 .highlight {
-  @extend %code-highlighting;
+	@extend %code-highlighting;
 }

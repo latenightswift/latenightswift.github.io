@@ -1,26 +1,26 @@
-.site-footer {
-  text-align: center;
-  line-height: 0;
+$footer-logo-size: $unit * 2;
+
+.site-footer .container {
+	padding-top: $unit * 2;
+	padding-bottom: $unit * 2;
+	text-align: center;
 }
 
-.site-footer a.footer-logomark {
-  display: inline-block;
-  margin: $unit * 2 auto;
-  opacity: 0.1;
-  transition: opacity $animation-duration;
+.site-footer ul.footer-info {
+	margin: 0 0 $unit 0;
+	padding: 0;
+	list-style: none;
+}
 
-  > svg {
-    display: block;
-    width: $unit * 2;
-    height: $unit * 2;
-  }
+.site-footer .logomark {
+	display: block;
+	margin: 0 auto;
+	width: $footer-logo-size;
+	height: $footer-logo-size;
+	opacity: 0.3;
 
-  &:hover {
-    opacity: 1;
-
-    svg path {
-      fill: $theme-color;
-      opacity: 1;
-    }
-  }
+	svg {
+		width: $footer-logo-size;
+		height: $footer-logo-size;
+	}
 }

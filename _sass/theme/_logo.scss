@@ -1,0 +1,18 @@
+.logomark {
+	transform: scale(1);
+	transition:
+		transform $animation-duration ease-out,
+		opacity $animation-duration ease-out;
+}
+
+.logomark svg path {
+	fill: $logo-color;
+}
+
+.logomark:hover {
+	opacity: 1;
+}
+
+.logomark:hover svg path {
+	fill: $theme-color;
+}

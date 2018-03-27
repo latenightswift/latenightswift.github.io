@@ -1,8 +1,17 @@
 .post-header {
-  text-align: center;
-  padding-bottom: $unit;
-}
+	text-align: center;
+	padding-bottom: $unit;
 
-.post-meta {
-  margin-top: -$unit;
+	h1 {
+		margin-top: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.post-meta {
+		color: $main-meta-text-color;
+		margin-top: -$unit;
+	}
 }
