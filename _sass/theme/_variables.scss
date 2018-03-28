@@ -1,7 +1,10 @@
 $unit: 27px;
 $animation-duration: 0.3s;
-$on-palm: 600px;
-$on-laptop: 800px;
+
+$device-sm-width: /* >= */ 768px;
+$device-md-width: /* >= */ 992px;
+$device-lg-width: /* >= */ 1200px;
+
 $content-horizontal-padding: 15px;
 
 $border-thickness: 2px;

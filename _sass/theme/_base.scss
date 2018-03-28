@@ -28,3 +28,39 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.hide-from-xs-down {
+	@include device-xs-max {
+		display: none;
+	}
+}
+
+.hide-from-sm-down {
+	@include device-sm-max {
+		display: none;
+	}
+}
+
+.hide-from-md-down {
+	@include device-md-max {
+		display: none;
+	}
+}
+
+.hide-from-sm-up {
+	@include device-sm-min {
+		display: none;
+	}
+}
+
+.hide-from-md-up {
+	@include device-md-min {
+		display: none;
+	}
+}
+
+.hide-from-lg-up {
+	@include device-lg-min {
+		display: none;
+	}
+}

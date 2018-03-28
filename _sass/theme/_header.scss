@@ -33,7 +33,7 @@ $header-collapsed-height: $unit * 2;
 			display: inline;
 			margin-right: 15px;
 
-			@include media-query($on-palm) {
+			@include device-xs-max {
 				margin-right: 10px;
 			}
 
@@ -64,7 +64,7 @@ $header-collapsed-height: $unit * 2;
 	text-align: right;
 }
 
-@include media-query($on-palm) {
+@include device-xs-max {
 	.site-header {
 		&:not(.collapsed) {
 			ul li {
@@ -96,7 +96,7 @@ $header-collapsed-height: $unit * 2;
 	}
 }
 
-@include media-query($on-palm) {
+@include device-xs-max {
 	.site-header.collapsed {
 		.header-search,
 		.header-github {
