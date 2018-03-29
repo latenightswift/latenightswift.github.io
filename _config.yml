@@ -8,7 +8,7 @@ subscribe_url: https://mailchimp.com
 
 # Build Settings
 markdown: kramdown
-google_analytics: UA—XXXXXXXX-X
+google_analytics: UA-116538952-1
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
