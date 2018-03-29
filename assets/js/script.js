@@ -1,9 +1,16 @@
 var lateNightSwift = (function() {
+	var hostnamePattern = "(www\.)?latenightswift\.com";
 	var unit = 27; // Must match $unit scss value
 	var isHeaderCollapsed = false;
 	var lineHeightGuide = null;
 
-	function setUpSiteHeaderCollapsingOnScroll() {
+	function init() {
+		_setUpSiteHeaderCollapsingOnScroll();
+		_setupExternalLinksToOpenInNewTab();
+		_setupShowMeTheRhythmLink();
+	}
+
+	function _setUpSiteHeaderCollapsingOnScroll() {
 		$(window).scroll(function() {
 			var scrollPosition = $(this).scrollTop();
 			var triggerPosition = unit;
@@ -19,21 +26,33 @@ var lateNightSwift = (function() {
 		})
 	}
 
-	function setupShowMeTheRhythmLink() {
-		var link = $("#show-me-the-rhythm");
-		link.click(function() {
-			toggleLineHeightGuide();
-			return false;
-		});
-		updateShowMeTheRhythmLinkText();
+	function _setupExternalLinksToOpenInNewTab() {
+		$("a")
+			.filter(function() {
+				var href = $(this).attr("href");
+				var externalURLPattern = "http(s)?://(?!" + hostnamePattern + ").*";
+				return href.match(externalURLPattern) !== null;
+			})
+			.each(function() {
+				$(this).attr("target", "_blank");
+			});
 	}
 
-	function updateShowMeTheRhythmLinkText() {
+	function _setupShowMeTheRhythmLink() {
+		var link = $("#show-me-the-rhythm");
+		link.click(function() {
+			_toggleLineHeightGuide();
+			return false;
+		});
+		_updateShowMeTheRhythmLinkText();
+	}
+
+	function _updateShowMeTheRhythmLinkText() {
 		var text = lineHeightGuide == null ? "Show Me the Rhythm" : "Enough of the Rhythm";
 		$("#show-me-the-rhythm").text(text)
 	}
 
-	function toggleLineHeightGuide() {
+	function _toggleLineHeightGuide() {
 		if (lineHeightGuide) {
 			lineHeightGuide.remove();
 			lineHeightGuide = null;
@@ -58,15 +77,11 @@ var lateNightSwift = (function() {
 			});
 			lineHeightGuide.appendTo("body");
 		}
-		updateShowMeTheRhythmLinkText();
+		_updateShowMeTheRhythmLinkText();
 	}
 
 	return {
-		init: function() {
-			setUpSiteHeaderCollapsingOnScroll();
-			setupShowMeTheRhythmLink();
-		},
-		toggleLineHeightGuide: toggleLineHeightGuide
+		init: init
 	};
 }());
 
