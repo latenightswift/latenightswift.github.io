@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% capture page_url %}{{ page.url | replace: 'index.html', '' | absolute_url }}{% endcapture %}
+{% capture page_title %}{% if page.title %}{{ page.title | escape }} — {{ site.title | escape }}{% else %}{{ site.title | escape }} — {{ site.description | escape }}{% endif %}{% endcapture %}
+{% capture page_description %}{{ page.summary | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endcapture %}
+
+  {% include head.html %}
+
+  <body{% if page.body-id %} id="{{ page.body-id }}"{% endif %}{% if page.body-class %} class="{{ page.body-class }}"{% endif %}>
+
+    {% include header.html %}
+
+    <main aria-label="Content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>
