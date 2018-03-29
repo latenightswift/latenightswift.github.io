@@ -3,5 +3,7 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.9"
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+  gem "jekyll-mentions"
 end
