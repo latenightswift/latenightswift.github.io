@@ -2,7 +2,7 @@
 layout: post
 title: "Layout Test"
 number: 0
-summary: "Bacon ipsum dolor amet drumstick tongue pastrami t-bone meatball. Sirloin ball tip ribeye burgdoggen tongue pancetta frankfurter tenderloin. Short ribs pork loin shank biltong burgdoggen boudin t-bone."
+description: "Bacon ipsum dolor amet drumstick tongue pastrami t-bone meatball. Sirloin ball tip ribeye burgdoggen tongue pancetta frankfurter tenderloin. Short ribs pork loin shank biltong burgdoggen boudin t-bone."
 
 ---
 

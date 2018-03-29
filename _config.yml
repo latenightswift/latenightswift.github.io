@@ -1,17 +1,25 @@
 # Site settings
 title: Late Night Swift
 description: A Swift and iOS Development Blog
-url: "http://www.latenightswift.com"
-twitter_username: latenightswift_
-github_username: latenightswift
+url: http://www.latenightswift.com
 twitter_url: https://twitter.com/latenightswift_
 github_url: https://github.com/latenightswift
 subscribe_url: https://mailchimp.com
+google_analytics: UA-116538952-1
+
+# Jekyll SEO Tag
+twitter:
+  username: latenightswift_
+social:
+  links:
+    - https://twitter.com/latenightswift_
+    - https://github.com/latenightswift
+lang: en_GB
 
 # Build Settings
 permalink: pretty
+timezone: Europe/London
 markdown: kramdown
-google_analytics: UA-116538952-1
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

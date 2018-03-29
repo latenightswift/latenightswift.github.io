@@ -12,7 +12,7 @@ layout: base
 		<h2 class="post-title">
 			<a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 		</h2>
-		<p class="post-summary">{{ post.summary | escape }}</p>
+		<p class="post-description">{{ post.description | escape }}</p>
 	</li>
 	{% endfor %}
 </ul>

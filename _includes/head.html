@@ -2,18 +2,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="{{ page_description }}">
+
+	{% seo %}
 
 	{% include google-analytics.html %}
 
-	{% if site.twitter_username %}
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@{{ site.twitter_username }}" />
-	{% endif %}
-
-	<meta property="og:url" content="{{ page_url }}" />
-	<meta property="og:title" content="{{ page.title | default: site.title | escape }}" />
-	<meta property="og:description" content="{{ page.summary | default: site.description | escape }}" />
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
 	{% if jekyll.environment == 'production' %}
 	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&amp;subset=latin-ext" rel="stylesheet">
@@ -47,9 +41,4 @@
 	{% endif %}
 
 	<script src="{{ "/assets/js/script.js" | relative_url }}"></script>
-
-	<link rel="canonical" href="{{ page_url }}">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-
-	<title>{{ page_title }}</title>
 </head>
