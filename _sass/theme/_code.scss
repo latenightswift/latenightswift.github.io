@@ -45,65 +45,65 @@
 
 	color: $plain;
 
-	.c		 { color: $comment } // Comment
-	.err	 {} // Error
-	.k		 { color: $keyword; } // Keyword
-	.o		 {} // Operator
-	.cm		{ color: $comment} // Comment.Multiline
-	.cp		{ color: $preprocessor } // Comment.Preproc
-	.c1		{ color: $comment } // Comment.Single
-	.cs		{ color: $comment } // Comment.Special
-	.gd		{} // Generic.Deleted
-	.gd .x {} // Generic.Deleted.Specific
-	.ge		{} // Generic.Emph
-	.gr		{} // Generic.Error
-	.gh		{} // Generic.Heading
-	.gi		{} // Generic.Inserted
-	.gi .x {} // Generic.Inserted.Specific
-	.go		{} // Generic.Output
-	.gp		{} // Generic.Prompt
-	.gs		{} // Generic.Strong
-	.gu		{} // Generic.Subheading
-	.gt		{} // Generic.Traceback
-	.kc		{ color: $keyword } // Keyword.Constant
-	.kd		{ color: $keyword } // Keyword.Declaration
-	.kp		{ color: $keyword } // Keyword.Pseudo
-	.kr		{ color: $keyword } // Keyword.Reserved
-	.kt		{ color: $class } // Keyword.Type
-	.m		 { color: $number } // Literal.Number
-	.s		 { color: $string } // Literal.String
-	.na		{ color: $attribute } // Name.Attribute
-	.nb		{} // Name.Builtin
-	.nc		{ color: $class } // Name.Class
-	.no		{ color: $constant } // Name.Constant
-	.ni		{} // Name.Entity
-	.ne		{} // Name.Exception
-	.nf		{ color: $function } // Name.Function
-	.nn		{} // Name.Namespace
-	.nt		{} // Name.Tag
-	.nv		{ color: $variable } // Name.Variable
-	.ow		{} // Operator.Word
-	.w		 {} // Text.Whitespace
-	.mf		{ color: $number } // Literal.Number.Float
-	.mh		{ color: $number } // Literal.Number.Hex
-	.mi		{ color: $number } // Literal.Number.Integer
-	.mo		{ color: $number } // Literal.Number.Oct
-	.sb		{ color: $string } // Literal.String.Backtick
-	.sc		{ color: $string } // Literal.String.Char
-	.sd		{ color: $string } // Literal.String.Doc
-	.s2		{ color: $string } // Literal.String.Double
-	.se		{ color: $string } // Literal.String.Escape
-	.sh		{ color: $string } // Literal.String.Heredoc
-	.si		{ color: $string } // Literal.String.Interpol
-	.sx		{ color: $string } // Literal.String.Other
-	.sr		{ color: $string } // Literal.String.Regex
-	.s1		{ color: $string } // Literal.String.Single
-	.ss		{ color: $string } // Literal.String.Symbol
-	.bp		{} // Name.Builtin.Pseudo
-	.vc		{ color: $class } // Name.Variable.Class
-	.vg		{} // Name.Variable.Global
-	.vi		{} // Name.Variable.Instance
-	.il		{ color: $number } // Literal.Number.Integer.Long
+	.c { color: $comment } // Comment
+	.err {} // Error
+	.k { color: $keyword; } // Keyword
+	.o {} // Operator
+	.cm { color: $comment} // Comment.Multiline
+	.cp { color: $preprocessor } // Comment.Preproc
+	.c1 { color: $comment } // Comment.Single
+	.cs { color: $comment } // Comment.Special
+	.gd {} // Generic.Deleted
+	.gd {} // Generic.Deleted.Specific
+	.ge {} // Generic.Emph
+	.gr {} // Generic.Error
+	.gh {} // Generic.Heading
+	.gi {} // Generic.Inserted
+	.gi {} // Generic.Inserted.Specific
+	.go {} // Generic.Output
+	.gp {} // Generic.Prompt
+	.gs {} // Generic.Strong
+	.gu {} // Generic.Subheading
+	.gt {} // Generic.Traceback
+	.kc { color: $keyword } // Keyword.Constant
+	.kd { color: $keyword } // Keyword.Declaration
+	.kp { color: $keyword } // Keyword.Pseudo
+	.kr { color: $keyword } // Keyword.Reserved
+	.kt { color: $class } // Keyword.Type
+	.m { color: $number } // Literal.Number
+	.s { color: $string } // Literal.String
+	.na { color: $attribute } // Name.Attribute
+	.nb {} // Name.Builtin
+	.nc { color: $class } // Name.Class
+	.no { color: $constant } // Name.Constant
+	.ni {} // Name.Entity
+	.ne {} // Name.Exception
+	.nf { color: $function } // Name.Function
+	.nn {} // Name.Namespace
+	.nt {} // Name.Tag
+	.nv { color: $variable } // Name.Variable
+	.ow {} // Operator.Word
+	.w {} // Text.Whitespace
+	.mf { color: $number } // Literal.Number.Float
+	.mh { color: $number } // Literal.Number.Hex
+	.mi { color: $number } // Literal.Number.Integer
+	.mo { color: $number } // Literal.Number.Oct
+	.sb { color: $string } // Literal.String.Backtick
+	.sc { color: $string } // Literal.String.Char
+	.sd { color: $string } // Literal.String.Doc
+	.s2 { color: $string } // Literal.String.Double
+	.se { color: $string } // Literal.String.Escape
+	.sh { color: $string } // Literal.String.Heredoc
+	.si { color: $string } // Literal.String.Interpol
+	.sx { color: $string } // Literal.String.Other
+	.sr { color: $string } // Literal.String.Regex
+	.s1 { color: $string } // Literal.String.Single
+	.ss { color: $string } // Literal.String.Symbol
+	.bp {} // Name.Builtin.Pseudo
+	.vc { color: $class } // Name.Variable.Class
+	.vg {} // Name.Variable.Global
+	.vi {} // Name.Variable.Instance
+	.il { color: $number } // Literal.Number.Integer.Long
 }
 
 // Application
