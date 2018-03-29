@@ -5,10 +5,18 @@
 }
 
 %full-width {
-	width: 100vw;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
+	@media screen and (min-width: $main-content-width) {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+	// On smaller windows have simpler layout to prevent
+	// weird sizing due to 100vw
+	@media screen and (max-width: $main-content-width - 1) {
+		margin-left: -$content-horizontal-padding;
+		margin-right: -$content-horizontal-padding;
+	}
 }

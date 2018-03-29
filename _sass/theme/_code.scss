@@ -20,7 +20,12 @@
 	@extend %code;
 	max-width: $extended-content-width;
 	margin: $unit * 2 auto;
-	padding: $unit $content-horizontal-padding;
+	padding: $unit 0;
+}
+
+%code-block-code-wrap {
+	margin: 0;
+	padding: 0 $content-horizontal-padding;
 }
 
 %code-block-code {
@@ -119,7 +124,7 @@ div.highlighter-rouge {
 		@extend %code-block-constrained-width;
 
 		> pre.highlight {
-			margin: 0;
+			@extend %code-block-code-wrap;
 
 			code {
 				@extend %code-block-code;
