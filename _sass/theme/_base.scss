@@ -7,6 +7,7 @@ body {
 a {
 	color: $header-footer-link-color;
 	text-decoration: underline;
+	transition: color $animation-duration ease-out;
 
 	&:hover {
 		color: $header-footer-link-color-alt;

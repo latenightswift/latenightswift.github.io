@@ -7,6 +7,7 @@
 
 .logomark svg path {
 	fill: $logo-color;
+	transition: fill $animation-duration ease-out;
 }
 
 .logomark:hover {
