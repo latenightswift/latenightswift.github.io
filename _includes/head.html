@@ -7,7 +7,7 @@
 
 	{% include google-analytics.html %}
 
-	<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+	{% feed_meta %}
 
 	{% if jekyll.environment == 'production' %}
 	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&amp;subset=latin-ext" rel="stylesheet">
