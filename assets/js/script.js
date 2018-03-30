@@ -7,6 +7,7 @@ var lateNightSwift = (function() {
 	function init() {
 		_setUpSiteHeaderCollapsingOnScroll();
 		_setupExternalLinksToOpenInNewTab();
+		_setupSearch();
 		_setupShowMeTheRhythmLink();
 	}
 
@@ -36,6 +37,31 @@ var lateNightSwift = (function() {
 			.each(function() {
 				$(this).attr("target", "_blank");
 			});
+	}
+
+	function _setupSearch() {
+		var searchModal = $("#search-modal");
+		var searchTermInput = searchModal.find("#search-term");
+
+		searchModal.on("shown.bs.modal", function() {
+			searchTermInput.focus();
+		})
+
+		$("#search-form").submit(function() {
+			if (searchTermInput.val().trim().length === 0) {
+				searchTermInput.focus();
+				return false;
+			}
+
+			var searchTerm = searchTermInput.val();
+			var searchPrefix = "site:latenightswift.com ";
+			var finalSearchTerm = searchPrefix + searchTerm;
+
+			var searchFinalQueryInput = $(this).find("input[name=q]");
+			searchFinalQueryInput.val(finalSearchTerm);
+
+		    return true;
+		});
 	}
 
 	function _setupShowMeTheRhythmLink() {

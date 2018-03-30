@@ -1,0 +1,32 @@
+input {
+	border-radius: 0;
+}
+
+.btn {
+	border-radius: 0;
+
+	&:active, &:hover, &:visited, &:focus {
+		box-shadow: none !important;
+		outline: none !important;
+	}
+}
+
+.btn.btn-primary {
+	background-color: $primary-button-color !important;
+	border-color: darken($primary-button-color, 15%) !important;
+
+	&:active, &:hover, &:visited, &:focus {
+		background-color: darken($primary-button-color, 15%) !important;
+		border-color: darken($primary-button-color, 30%) !important;
+	}
+}
+
+.btn.btn-secondary {
+	background-color: $secondary-button-color !important;
+	border-color: lighten($secondary-button-color, 15%) !important;
+
+	&:active, &:hover, &:visited, &:focus {
+		background-color: lighten($secondary-button-color, 15%) !important;
+		border-color: lighten($secondary-button-color, 30%) !important;
+	}
+}

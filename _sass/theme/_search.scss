@@ -1,0 +1,25 @@
+#search-modal {
+	.modal-content {
+		background: $theme-dark;
+		border: none;
+		border-radius: 0px;
+	}
+
+	.modal-header, .modal-body, .modal-footer {
+		border: none;
+	}
+
+	#search-term {
+		width: 100%;
+	}
+
+	.modal-footer {
+		padding-top: 0;
+	}
+
+	.btn {
+		float: right;
+		display: block;
+		margin: 0 0 0 15px;
+	}
+}

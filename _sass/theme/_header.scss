@@ -42,6 +42,11 @@ $header-collapsed-height: $unit * 2;
 			}
 		}
 	}
+
+	.header-search a:focus {
+		// As link doesn't navigate away, prevent blue outline
+		outline: none;
+	}
 }
 
 .site-header {
