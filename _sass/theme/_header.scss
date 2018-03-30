@@ -6,7 +6,7 @@ $header-collapsed-height: $unit * 2;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
+	z-index: $floating-bar-z-index;
 }
 
 .site-header .container {
