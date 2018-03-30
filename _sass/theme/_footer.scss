@@ -24,3 +24,8 @@ $footer-logo-size: $unit * 2;
 		height: $footer-logo-size;
 	}
 }
+
+#show-me-the-rhythm:hover {
+	// Prevent blue outline
+	outline: none;
+}
