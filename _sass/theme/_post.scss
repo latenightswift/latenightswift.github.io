@@ -14,10 +14,6 @@
 		color: $main-meta-text-color;
 		margin-top: -$unit;
 	}
-
-	hr {
-		margin-bottom: 0;
-	}
 }
 
 .post-content {
@@ -27,5 +23,9 @@
 		max-width: 100%;
 		width: auto;
 		height: $unit * 20;
+	}
+
+	hr {
+		margin-bottom: $unit - $hr-height;
 	}
 }
