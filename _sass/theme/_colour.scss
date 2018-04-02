@@ -6,6 +6,7 @@ $theme-dark: #262626;
 
 $header-footer-background-color: #1c1c1d;
 $main-background-color: $theme-dark;
+$main-background-aside-color: lighten($theme-dark, 5%);
 $code-background-color: $header-footer-background-color;
 
 $header-footer-text-color: #999;
