@@ -19,3 +19,13 @@
 		margin-bottom: 0;
 	}
 }
+
+.post-content {
+	p img {
+		display: block;
+		margin: 0 auto $unit;
+		max-width: 100%;
+		width: auto;
+		height: $unit * 20;
+	}
+}

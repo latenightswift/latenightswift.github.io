@@ -10,9 +10,7 @@ date: 2018-04-02
 
 Welcome to post #1 of Late Night Swift! How better to kick things off than to look at building Night Mode, an ever important feature as more and more people use their devices at night.
 
-<video width="304" height="540" autoplay loop>
-	<source src="https://github.com/latenightswift/night-mode/raw/master/Preview.mov" type="video/mp4" />
-</video>
+![Night node demonstration](https://github.com/latenightswift/night-mode/raw/master/Preview.gif)
 
 Our goal is to make it super simple to theme your UI components and provide a smooth transition between them. To achieve this we'll build a protocol called `Themed`, which anything can conform to to get involved in theming.
 
