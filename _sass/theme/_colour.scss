@@ -1,10 +1,12 @@
 $logo-color: #fdfdfd;
 
-$theme-light: #ffeee4;
+// Also change main colours in _config.yml
 $theme-color: #f88a36;
+$theme-color-light: lighten($theme-color, 15%);
 $theme-dark: #262626;
+$theme-dark-alt: #1c1c1d;
 
-$header-footer-background-color: #1c1c1d;
+$header-footer-background-color: $theme-dark-alt;
 $main-background-color: $theme-dark;
 $main-background-aside-color: lighten($theme-dark, 5%);
 $code-background-color: $header-footer-background-color;
@@ -17,7 +19,7 @@ $header-footer-link-color: #999;
 $header-footer-link-color-alt: $theme-color;
 
 $main-link-color: $theme-color;
-$main-link-color-alt: lighten($main-link-color, 15%);
+$main-link-color-alt: $theme-color-light;
 
 $primary-button-color: $theme-color;
 $secondary-button-color: $theme-dark;

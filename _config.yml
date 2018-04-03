@@ -6,6 +6,9 @@ twitter_url: https://twitter.com/latenightswift_
 github_url: https://github.com/latenightswift
 subscribe_url: https://mailchimp.com
 google_analytics: UA-116538952-1
+theme_color: f88a36
+theme_dark: 262626
+theme_dark_alt: 1c1c1d
 
 # Jekyll SEO Tag
 twitter:
