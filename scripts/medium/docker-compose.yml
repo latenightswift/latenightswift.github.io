@@ -1,0 +1,8 @@
+version: '3'
+services:
+  python:
+    env_file: .env
+    build: .
+    volumes:
+     - ../../:/home
+    working_dir: /home/scripts/medium
