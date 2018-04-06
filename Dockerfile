@@ -14,4 +14,3 @@ WORKDIR /srv
 COPY . /srv
 
 RUN bundle install
-
