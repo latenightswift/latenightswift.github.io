@@ -3,9 +3,7 @@ layout: post
 title: Implementing Night Mode
 number: 1
 description: "Post #1 of Late Night Swift! We're kicking things off by looking into building Night Mode, an ever important feature as more and more people use their devices at night."
-
-sitemap: false
-date: 2018-04-02
+excerpt: "Post #1 of Late Night Swift! We're kicking things off by looking into building Night Mode, an ever important feature as more and more people use their devices at night."
 ---
 
 Welcome to post #1 of Late Night Swift! How better to kick things off than to look at building Night Mode, an ever important feature as more and more people use their devices at night.
