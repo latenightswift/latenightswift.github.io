@@ -14,7 +14,7 @@ parser.add_argument(
 )
 parser.add_argument(
 	"-t", "--token",
-	default=os.environ["MEDIUM_ACCESS_TOKEN"],
+	default=os.environ.get("MEDIUM_ACCESS_TOKEN"),
 	help=("Medium access token. Default is to read "
 		  "MEDIUM_ACCESS_TOKEN environment variable")
 )
@@ -27,7 +27,9 @@ access_token = args.token
 with open(config_path, "r") as stream:
     config = yaml.load(stream)
 
+blog_url_display = "latenightswift.com"
 blog_url = "https://www.latenightswift.com"
+
 post_content_replacements = [
 	("@{{ site.twitter.username }}", "[@%s](%s)" % (
 		config["twitter"]["username"],
@@ -44,7 +46,14 @@ file_name = os.path.basename(file_path)
 post_path = os.path.splitext(file_name)[0].replace("-", "/", 3) + "/"
 post_url = "%s/%s" % (blog_url, post_path)
 post_title = post.metadata["title"]
-post_content = post.content
+
+post_content_prefix = (
+	"# %s\n"
+	"*For optimum flavour, this post is best served at [Late Night Swift](%s).*"
+	"\n\n---\n\n"
+	% (post_title, post_url)
+)
+post_content = post_content_prefix + post.content
 
 for find, replace in post_content_replacements:
 	post_content = re.sub(find, replace, post_content)
