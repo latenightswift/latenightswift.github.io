@@ -35,5 +35,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - README.md
   - design
   - scripts
