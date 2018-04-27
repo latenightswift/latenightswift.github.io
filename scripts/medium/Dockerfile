@@ -10,7 +10,7 @@ RUN apt-get -y install python2.7-dev python-pip
 
 RUN pip install --upgrade pip
 
-COPY ../../ /home
+COPY ./ /home
 WORKDIR /home/scripts/medium
 
 RUN pip install -r requirements.txt

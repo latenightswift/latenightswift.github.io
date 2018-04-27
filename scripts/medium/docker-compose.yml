@@ -1,8 +1,11 @@
 version: '3'
 services:
-  python:
+  medium:
+    image: latenightswift/medium
     env_file: .env
-    build: .
+    build:
+      context: ../../
+      dockerfile: ./scripts/medium/Dockerfile
     volumes:
      - ../../:/home
     working_dir: /home/scripts/medium
