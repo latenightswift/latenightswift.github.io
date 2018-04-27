@@ -64,10 +64,19 @@ var lateNightSwift = (function() {
 		});
 	}
 
+	function _sendAnalyticsEvent(category, action, label) {
+		if (typeof gtag === 'undefined') return;
+		gtag('event', action, {
+			'event_category': category,
+			'event_label': label
+		});
+	}
+
 	function _setupShowMeTheRhythmLink() {
 		var link = $("#show-me-the-rhythm");
 		link.click(function() {
 			_toggleLineHeightGuide();
+			_sendAnalyticsEvent('Page', 'toggle', 'Show Me the Rhythm');
 			return false;
 		});
 		_updateShowMeTheRhythmLinkText();
