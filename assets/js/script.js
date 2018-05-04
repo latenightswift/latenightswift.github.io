@@ -6,7 +6,7 @@ var lateNightSwift = (function() {
 
 	function init() {
 		_setUpSiteHeaderCollapsingOnScroll();
-		_setupExternalLinksToOpenInNewTab();
+		_setupExternalLinks();
 		_setupSearch();
 		_setupShowMeTheRhythmLink();
 	}
@@ -27,15 +27,19 @@ var lateNightSwift = (function() {
 		})
 	}
 
-	function _setupExternalLinksToOpenInNewTab() {
+	function _setupExternalLinks() {
 		$("a")
 			.filter(function() {
-				var href = $(this).attr("href");
+				var url = $(this).attr("href");
 				var externalURLPattern = "http(s)?://(?!" + hostnamePattern + ").*";
-				return href.match(externalURLPattern) !== null;
+				return url.match(externalURLPattern) !== null;
 			})
 			.each(function() {
 				$(this).attr("target", "_blank");
+			})
+			.click(function() {
+				var url = $(this).attr("href");
+				_sendAnalyticsEvent("outbound", "click", url, "beacon")
 			});
 	}
 
@@ -64,19 +68,26 @@ var lateNightSwift = (function() {
 		});
 	}
 
-	function _sendAnalyticsEvent(category, action, label) {
-		if (typeof gtag === 'undefined') return;
-		gtag('event', action, {
-			'event_category': category,
-			'event_label': label
-		});
+	function _sendAnalyticsEvent(category, action, label, transportType) {
+		if (typeof gtag === "undefined") return;
+
+		var properties = {
+			"event_category": category,
+			"event_label": label,
+		}
+
+		if (typeof transportType !== "undefined") {
+			properties["transport_type"] = transportType;
+		}
+
+		gtag("event", action, properties);
 	}
 
 	function _setupShowMeTheRhythmLink() {
 		var link = $("#show-me-the-rhythm");
 		link.click(function() {
 			_toggleLineHeightGuide();
-			_sendAnalyticsEvent('Page', 'toggle', 'Show Me the Rhythm');
+			_sendAnalyticsEvent("Page", "toggle", "Show Me the Rhythm");
 			return false;
 		});
 		_updateShowMeTheRhythmLinkText();
