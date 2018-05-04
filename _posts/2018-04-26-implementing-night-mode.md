@@ -60,7 +60,7 @@ protocol ThemeProvider {
 	var currentTheme: Theme { get }
 
 	/// Subscribe to be notified when the theme changes. Handler will be
-	/// remove from subscription when `object` is deallocated.
+	/// removed from subscription when `object` is deallocated.
 	func subscribeToChanges(_ object: AnyObject, handler: @escaping (Theme) -> Void)
 }
 ```
