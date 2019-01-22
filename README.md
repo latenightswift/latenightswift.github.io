@@ -8,7 +8,7 @@ Install Docker for Mac: https://www.docker.com/docker-mac
 
 ```bash
 cd [repo-path]
-docker-compose build
+docker-compose build --no-cache
 ```
 
 ## Starting and Stopping
