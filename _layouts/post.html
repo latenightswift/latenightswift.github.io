@@ -10,7 +10,7 @@ layout: base
 
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date_to_long_string }}
+        {{ page.date | date: "%B %Y" }}
       </time>
     </p>
     <hr />
