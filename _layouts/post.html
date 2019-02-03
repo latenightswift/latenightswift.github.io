@@ -8,6 +8,10 @@ layout: base
       <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
     </h1>
 
+    {% if page.subtitle %}
+    <h4 class="post-subtitle" itemprop="name headline">{{ page.subtitle | escape }}</h4>
+    {% endif %}
+
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%B %Y" }}

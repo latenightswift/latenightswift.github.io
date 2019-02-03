@@ -10,6 +10,14 @@
 		}
 	}
 
+	.post-subtitle {
+		max-width: 90%;
+		font-weight: 600;
+		font-size: 1rem;
+		color: $main-text-color;
+		margin: -$line-height auto $line-height auto;
+	}
+
 	.post-meta {
 		color: $main-meta-text-color;
 		margin-top: -$unit;
