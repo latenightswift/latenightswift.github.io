@@ -29,7 +29,7 @@ If you need to update/add Gems:
 
 1. Shut down: `docker-compose down`
 2. Edit: [Gemfile](Gemfile)
-3. Re-build: `docker-compose build`
+3. Re-build: `docker-compose build --no-cache`
 4. Re-start: `docker-compose up`
 
 ## Cross Posting to Medium
