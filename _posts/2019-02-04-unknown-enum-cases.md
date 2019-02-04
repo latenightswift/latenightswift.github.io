@@ -6,7 +6,7 @@ excerpt: "Using the hidden power of CaseIterable to represent unknown values in 
 subtitle: "Using the hidden power of CaseIterable to represent unknown values in RawRepresentable types."
 ---
 
-Sometimes we need the ability to be less strict when parsing API responses, gracefully handling new values that are not recognised. When these values are modelled as enums and we receive an unexpected value, decoding will fail. If these enums are used in many models, it's worthwhile looking for an elegant solution to avoid custom decoding everywhere!
+Sometimes we need the ability to be less strict when parsing API responses, gracefully handling new values that are not recognised. When these values are modelled as enums we have a problem: decoding will fail if we receive an unexpected value! If these enums are used in many models it's worthwhile looking for an elegant solution.
 
 We'll demonstrate the journey towards solving this problem with the following example:
 
