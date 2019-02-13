@@ -104,7 +104,7 @@ enum Material: String {
 extension Material: Codable {}
 
 extension Material: UnknownCaseRepresentable {
-	static let unknownCase: Material = .other
+	static let unknownCase = .other
 }
 
 Material(rawValue: "glass")
